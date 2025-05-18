@@ -113,3 +113,26 @@ data_directory ДО всех изменений
 >sudo chmod 700 /postgres/pgdata
 
 Добавить существующий диск с помощью [Смонтировать диск, созданный из снимка или образа](https://yandex.cloud/ru/docs/compute/operations/vm-control/vm-attach-disk?from=int-console-help-center-or-nav)
+>sudo mkdir /postgres/pgdata
+>sudo mount /dev/vdb1 /postgres/pgdata
+>sudo chown -R postgres:postgres /postgres/pgdata
+>sudo chmod -R 700 /postgres/pgdata
+![image](https://github.com/user-attachments/assets/e34711ac-e8df-4f0a-a086-209cdea26b83)
+
+Поправить локацию для data_directory
+![image](https://github.com/user-attachments/assets/93b59a84-6951-4a30-b213-079414d8dc54)
+
+запустить Postgres
+![image](https://github.com/user-attachments/assets/79d1b879-1fdc-47ef-8f8b-1e18c41e9c79)
+
+Проверка базы CARGO в esartison-vm2 - база на месте
+![image](https://github.com/user-attachments/assets/5f1e6c90-cb2b-4ac3-b3f7-1d1d7e5d71c8)
+
+проверка данных в таблице
+![image](https://github.com/user-attachments/assets/20a40e7c-b1dd-4383-9cb7-5e2fbe76467e)
+
+Все сработало, успешно перенесли кластер с таблицей на другой сервер. 
+
+
+
+
