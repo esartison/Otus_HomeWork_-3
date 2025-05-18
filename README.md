@@ -95,3 +95,21 @@ data_directory ДО всех изменений
 ![image](https://github.com/user-attachments/assets/cb41df5d-c40b-4a75-a359-acc722f6ac53)
 
 Так-как копирование данных через rsync было консистентным(во время остановленного экземпляра) данные видны и все хорошо.
+
+
+## Задание со звездочкой: перенос базы на другой сервер(VM) ##
+Добавил новую VM(esartison-vm2) и остановил страую(esartison-vm1), подклюил pgdata в новую VM
+![image](https://github.com/user-attachments/assets/7b3eb737-d298-4475-94a8-44e7f8165c4a)
+
+установил postgres на esartison-vm2
+![image](https://github.com/user-attachments/assets/0ede3fa8-02f8-45dc-8f37-eaade5499da3)
+
+Остановил postgres
+>sudo systemctl stop postgresql
+
+создал новый pgdata
+>sudo mkdir -p /postgres/pgdata
+>sudo chown postgres:postgres /postgres/pgdata
+>sudo chmod 700 /postgres/pgdata
+
+Добавить существующий диск с помощью [Смонтировать диск, созданный из снимка или образа](https://yandex.cloud/ru/docs/compute/operations/vm-control/vm-attach-disk?from=int-console-help-center-or-nav)
