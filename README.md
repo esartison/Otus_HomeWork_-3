@@ -22,7 +22,8 @@
 ![image](https://github.com/user-attachments/assets/6fd3e968-e27d-455c-bb03-2ffa716eb21d)
 
 добавил новый диск в YC
-![image](https://github.com/user-attachments/assets/89f2b2b1-8fad-45e2-b220-80962b13f145)
+![image](https://github.com/user-attachments/assets/3ff17eb5-f41c-4f32-abd5-770203991c40)
+
 
 Установил Posrgres 17 с настройками по умолчанию
 ![image](https://github.com/user-attachments/assets/95acc8bd-8096-4696-9624-f0876d509192)
@@ -34,6 +35,10 @@
 
 
 ## (3) Добавьте внешний диск к виртуальной машине и перенесите туда базу данных. ## 
+Добавил директорию /pgdataext, прописал в fstab, перезапустил VM чтобы убедиться что диск монтируется корректно
+![image](https://github.com/user-attachments/assets/3364f313-f548-4207-a74f-35bc25726371)
+Использовал документ [Разметить и смонтировать пустой диск][(https://docs.docker.com/engine/install/ubuntu/](https://yandex.cloud/ru/docs/compute/operations/vm-control/vm-attach-disk?from=int-console-help-center-or-nav)
+
 
 
 ## (4) Настройте PostgreSQL для работы с новым диском. ##
