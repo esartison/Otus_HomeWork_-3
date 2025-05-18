@@ -52,6 +52,7 @@
 Использовал документ [Разметить и смонтировать пустой диск](https://yandex.cloud/ru/docs/compute/operations/vm-control/vm-attach-disk?from=int-console-help-center-or-nav)
 
 data_directory ДО всех изменений
+
 ![image](https://github.com/user-attachments/assets/85104b33-8720-488d-9432-f8541bb941a0)
 
 Нужно остановить сервис Postgres на сервере
