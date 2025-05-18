@@ -51,9 +51,41 @@
 ![image](https://github.com/user-attachments/assets/3364f313-f548-4207-a74f-35bc25726371)
 Использовал документ [Разметить и смонтировать пустой диск](https://yandex.cloud/ru/docs/compute/operations/vm-control/vm-attach-disk?from=int-console-help-center-or-nav)
 
+data_directory ДО всех изменений
+![image](https://github.com/user-attachments/assets/85104b33-8720-488d-9432-f8541bb941a0)
+
+Нужно остановить сервис Postgres на сервере
+![image](https://github.com/user-attachments/assets/29178b6c-7ad4-4525-a17f-ff7b729897eb)
+
+синхронизовать через rsync старую и новую директорию
+>sudo rsync -av /var/lib/postgresql /pgdataext
+![image](https://github.com/user-attachments/assets/b0de9b99-f5e7-458c-9b51-0a1c4994cea3)
+
+переименовываем старую директорию для каталога main
+>mv /var/lib/postgresql/17/main /var/lib/postgresql/17/main_bkp_18May2025
+![image](https://github.com/user-attachments/assets/172aea73-aa9c-4c42-9e12-8450c4987f5c)
+
+
+
 
 
 ## (4) Настройте PostgreSQL для работы с новым диском. ##
 
+Правим локацию data_directory  в postgresql.conf
+![image](https://github.com/user-attachments/assets/444d8522-528f-4a47-a315-8caebba1759f)
+
+Перезапускаем postgres
+![image](https://github.com/user-attachments/assets/a14b0f69-1cdf-48fb-b8e8-12f2a921a268)
+
+Проверка новой локации
+![image](https://github.com/user-attachments/assets/9b0a7ced-3fb9-4737-8b0e-b347d5c276f3)
+
+удяляем старую директорию
+![image](https://github.com/user-attachments/assets/71d7a8cf-b593-4ba4-bcfc-498805a2ed4d)
+
 
 ## (5) Проверьте, что данные сохранились и доступны. ##
+
+Данные после переноса на /pgdataext сохранились
+![image](https://github.com/user-attachments/assets/cb41df5d-c40b-4a75-a359-acc722f6ac53)
+
