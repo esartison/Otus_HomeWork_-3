@@ -28,7 +28,21 @@
 
 
 ## (2) Создайте таблицу с данными о перевозках. ## 
-Создать базу данных 
+Создать базу данных CARGO
+![image](https://github.com/user-attachments/assets/9c59bcd2-39b3-48f4-9d8f-efbd9b5b0b1a)
+
+Создал совсем простую таблицу
+
+>CREATE TABLE all_shipments (
+>  shipment_id SERIAL UNIQUE NOT NULL,
+>  country_code VARCHAR(10) NOT NULL
+>);
+>
+>insert into all_shipments (shipment_id, country_code)
+>values (1,'BY');
+![image](https://github.com/user-attachments/assets/9f227098-491f-4d7c-a4d7-8342f1bf71c6)
+
+
 
 
 
