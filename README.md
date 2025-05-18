@@ -37,7 +37,7 @@
 ## (3) Добавьте внешний диск к виртуальной машине и перенесите туда базу данных. ## 
 Добавил директорию /pgdataext, прописал в fstab, перезапустил VM чтобы убедиться что диск монтируется корректно
 ![image](https://github.com/user-attachments/assets/3364f313-f548-4207-a74f-35bc25726371)
-Использовал документ [Разметить и смонтировать пустой диск][(https://docs.docker.com/engine/install/ubuntu/](https://yandex.cloud/ru/docs/compute/operations/vm-control/vm-attach-disk?from=int-console-help-center-or-nav)
+Использовал документ [Разметить и смонтировать пустой диск][(https://yandex.cloud/ru/docs/compute/operations/vm-control/vm-attach-disk?from=int-console-help-center-or-nav)
 
 
 
