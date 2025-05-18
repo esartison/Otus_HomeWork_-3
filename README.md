@@ -51,6 +51,8 @@
 ![image](https://github.com/user-attachments/assets/3364f313-f548-4207-a74f-35bc25726371)
 Использовал документ [Разметить и смонтировать пустой диск](https://yandex.cloud/ru/docs/compute/operations/vm-control/vm-attach-disk?from=int-console-help-center-or-nav)
 
+Для того что перенести pg_data на новый диск нужно остановить процессы, сделать копию, поправить конфиг и заново запустить экземпляр Postgres
+
 data_directory ДО всех изменений
 
 ![image](https://github.com/user-attachments/assets/85104b33-8720-488d-9432-f8541bb941a0)
@@ -78,10 +80,12 @@ data_directory ДО всех изменений
 Перезапускаем postgres
 ![image](https://github.com/user-attachments/assets/a14b0f69-1cdf-48fb-b8e8-12f2a921a268)
 
-Проверка новой локации
+Проверка новой локации ПОСЛЕ
+
 ![image](https://github.com/user-attachments/assets/9b0a7ced-3fb9-4737-8b0e-b347d5c276f3)
 
 удяляем старую директорию
+
 ![image](https://github.com/user-attachments/assets/71d7a8cf-b593-4ba4-bcfc-498805a2ed4d)
 
 
@@ -90,3 +94,4 @@ data_directory ДО всех изменений
 Данные после переноса на /pgdataext сохранились
 ![image](https://github.com/user-attachments/assets/cb41df5d-c40b-4a75-a359-acc722f6ac53)
 
+Так-как копирование данных через rsync было консистентным(во время остановленного экземпляра) данные видны и все хорошо.
