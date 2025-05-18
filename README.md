@@ -123,6 +123,7 @@ data_directory ДО всех изменений
 ![image](https://github.com/user-attachments/assets/93b59a84-6951-4a30-b213-079414d8dc54)
 
 запустить Postgres
+
 ![image](https://github.com/user-attachments/assets/79d1b879-1fdc-47ef-8f8b-1e18c41e9c79)
 
 Проверка базы CARGO в esartison-vm2 - база на месте
