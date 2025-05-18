@@ -18,6 +18,14 @@
 
 
 ## (1) Создайте виртуальную машину с Ubuntu 20.04 и установите PostgreSQL 15 или выше. ##
+взял уже существующую VM в YC с лабами для Docker, решил не создавать новую для экономии времени
+![image](https://github.com/user-attachments/assets/6fd3e968-e27d-455c-bb03-2ffa716eb21d)
+
+добавил новый диск 
+![image](https://github.com/user-attachments/assets/89f2b2b1-8fad-45e2-b220-80962b13f145)
+
+Установил Posrgres 17 с настройками по умолчанию
+![image](https://github.com/user-attachments/assets/95acc8bd-8096-4696-9624-f0876d509192)
 
 
 ## (2) Создайте таблицу с данными о перевозках. ## 
